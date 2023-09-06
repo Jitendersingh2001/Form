@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/style.css" />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"
+      integrity="sha512-E8QSvWZ0eCLGk4km3hxSsNmGWbLtSCSUcewDQPQWZF6pEU8GlT8a5fF32wOl1i8ftdMhssTrF/OhyGWwonTcXA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="main-conatiner">
+        <div class="form-head">
+          <span>SIGN UP</span>
+        </div>
+        <div class="form-container">
+          <form id="myForm" onsubmit="return onSubmit();">
+            <label for="FirstName">First Name:</label><br />
+            <input type="text" id="FirstName" name="FirstName" /><br />
+
+            <label for="LastName">Last Name:</label><br />
+            <input type="text" id="LastName" name="LastName" /><br />
+
+            <label for="PhoneNo">Phone No:</label><br />
+            <input
+              type="number"
+              id="PhoneNo"
+              name="PhoneNo"
+              oninput="if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+              maxlength="10"
+            /><br />
+
+            <label for="email">E-mail:</label><br />
+            <input
+              type="email"
+              id="email"
+              name="email"
+              pattern=".+@gmail\.com"
+            /><br />
+
+            <label for="Password">Password:</label><br />
+            <input type="password" id="Password" name="Password" /><br />
+
+            <label for="ConfirmPassword">Confirm Password:</label><br />
+            <input
+              type="password"
+              id="ConfirmPassword"
+              name="ConfirmPassword"
+            /><br />
+
+            <label>Choose a Subject: -</label><br />
+            <input type="checkbox" id="Subject1" name="Subject" value="Hindi" />
+            <label for="Subject1"> Hindi</label>
+            <input
+              type="checkbox"
+              id="Subject2"
+              name="Subject"
+              value="English"
+            />
+            <label for="Subject2"> English</label>
+            <input
+              type="checkbox"
+              id="Subject3"
+              name="Subject"
+              value="Punjabi"
+            />
+            <label for="Subject3"> Punjabi</label><br />
+            <input type="checkbox" id="agree" name="agree" value="agree" />
+            <label for="agree"> I agree all Terms and Condition</label><br />
+            <button type="signUp" id="submit">Sign Up</button>
+            <button type="reset" id="Reset">Reset</button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <script src="/js/script.js"></script>
+  </body>
+</html>
